@@ -20,3 +20,9 @@ Also, completing a quest involves multiple steps and requires the player to inte
 ### Civilitzation
 In games like Civilization, combat is turn-based, meaning that each player or character takes turns making moves. The game uses a task queue to manage the turn order and ensure that each player or character gets their turn in the correct order.
 
+## Command Pattern
+In order to implement task queues, we utilize what is known as the command pattern. According to the book "Game Programming Patterns", "commands are an object-oriented replacement for callbacks". By treating tasks as objects rather than functions, we can apply the command pattern to redefine keys and change the actor of the action.
+
+To apply the command pattern, you typically define a Command interface or abstract class that specifies a method for executing the command. You then create concrete command classes that implement the Command interface and encapsulate a specific request or action. The command objects are usually created by a client and passed to an invoker object, which maintains a queue of commands and executes them in order.
+
+In video games, the command pattern can be used to implement task queues, as mentioned earlier. By treating tasks as objects and encapsulating them within command objects, you can easily add them to a task queue and execute them in the background, while allowing the player to continue interacting with the game world. This approach enables you to create complex gameplay mechanics that can be managed seamlessly and efficiently, without disrupting the player's experience.
