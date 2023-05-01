@@ -1,4 +1,4 @@
-# TaskQueue
+# TASK QUEUE: Project Research
 
 ## Introduction
 Tasks refer to work that may take a long time to complete and can be processed asynchronously. Waiting until a task completes before proceeding with the game is not feasible. To manage these tasks effectively, a Task Queue is utilized, where all the tasks are added and executed in the background. There are two types of Task Queues available: Push Queues and Pull Queues. Push Queues automatically handle the actions that are added to them, whereas Pull Queues contain a list of actions that can be executed at any time.
@@ -10,11 +10,13 @@ On the other hand, Pull Queues are typically used in RPG games where a character
 ## Task Queue in videogames
 A great way to learn how to use task queues in video games is by observing how other games have implemented them. Here are some examples of task queues that are easy to identify at first glance.
 
-### Minecraft
-In many games with crafting mechanics, players can add crafting recipes to a task queue. The game will then automatically process these recipes, allowing players to continue exploring or engaging in other activities while their items are crafted in the background.
+### Age of Empires
+In games like Age of Empires, constructing a building takes time and resources. The game adds the construction task to a queue and processes it in the background while allowing the player to continue managing their empire.
 
 ### World of Warcraft
 In games with RPG mechanics, players can use powerful abilities that have a cooldown period before they can be used again. These abilities are added to a task queue and cannot be used again until the cooldown has completed.
+Also, completing a quest involves multiple steps and requires the player to interact with various NPCs or objects. The game uses a task queue to manage the quest progression and ensure that the player completes each step in the correct order.
 
-### Overwatch
-In online multiplayer games, the game uses task queues to synchronize gameplay events between players. For example, when a player fires a weapon, the game will add this event to a task queue and broadcast it to other players, ensuring that all players see the same events in the same order.
+### Civilitzation
+In games like Civilization, combat is turn-based, meaning that each player or character takes turns making moves. The game uses a task queue to manage the turn order and ensure that each player or character gets their turn in the correct order.
+
