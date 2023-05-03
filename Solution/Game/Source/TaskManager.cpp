@@ -6,6 +6,8 @@
 #include "Input.h"
 
 #include <iostream>
+
+//TODO 4 Let's fill the function Execute command for each class. In these case, how should the player move
 bool MoveLeft::Execute(Player* actor)
 {
 	bool ret = false;
@@ -33,7 +35,6 @@ bool MoveRight::Execute(Player* actor)
 	}
 	else
 	{
-		//std::cout << actor->pos.x << std::endl;
 		actor->pos.x += actor->speed.x;
 	}
 	return ret;
@@ -74,9 +75,9 @@ bool MoveBackWard::Execute(Player* actor)
 bool Task::Update(float dt)
 {
 	bool ret = false; 
+	//TODO 5 Pop the first task of the list
 	if (app->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN)
 	{
-		//TODO 3 Pop the first task of the list
 		if (aux_task == nullptr && TaskQueue.size() != 0)
 		{
 			aux_task = TaskQueue.front();
@@ -100,7 +101,7 @@ bool Task::CleanUp()
 
 bool Task::AddTask(Task * task)
 {
-	//TODO 3 Add the new task to the list
+	//TODO 6 Add the new task to the list
 	TaskQueue.push(task);
 
 	return true;
@@ -110,7 +111,7 @@ bool Task::DoTask()
 {
 	if (aux_task != nullptr)
 	{
-		//TODO 3 If the task is finished, pop the next task until the queue is empty
+		//TODO 7 If the task is finished, pop the next task until the queue is empty
 		if (aux_task->Execute(app->scene->player))
 		{
 			if (TaskQueue.size() != 0)

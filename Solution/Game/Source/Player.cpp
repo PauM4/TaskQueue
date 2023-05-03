@@ -36,6 +36,7 @@ bool Player::Start() {
 	speed.y = 2;
 	texture = app->tex->Load(texturePath);
 
+	//TODO 8 Initialize the task that we will use
 	buttonD = new MoveRight;
 	buttonA = new MoveLeft;
 	buttonW = new MoveForward;
@@ -53,7 +54,7 @@ bool Player::Update()
 
 bool Player::CleanUp()
 {
-	//TODO 4 Remember to delete the new Tasks
+	//TODO 9 Remember to delete the new Tasks
 	delete buttonD;
 	delete buttonA;
 	delete buttonW;
@@ -63,7 +64,7 @@ bool Player::CleanUp()
 
 bool Player::Movement()
 {
-	//TODO 4 Add the task to the queque 
+	//TODO 10 Add the task to the queque 
 	if (app->input->GetKey(SDL_SCANCODE_A) == KEY_DOWN)
 	{
 		posaux = pos;
