@@ -68,22 +68,17 @@ bool App::Awake()
 {
 	bool ret = false;
 
-	// L01: DONE 3: Load config from XML
 	ret = LoadConfig();
 
 	if (ret == true)
 	{
-		title = configNode.child("app").child("title").child_value(); // L01: DONE 4: Read the title from the config file
+		title = configNode.child("app").child("title").child_value(); 
 
 		ListItem<Module*>* item;
 		item = modules.start;
 
 		while (item != NULL && ret == true)
 		{
-			// L01: DONE 5: Add a new argument to the Awake method to receive a pointer to an xml node.
-			// If the section with the module name exists in config.xml, fill the pointer with the valid xml_node
-			// that can be used to read all variables for that module.
-			// Send nullptr if the node does not exist in config.xml
 			pugi::xml_node node = configNode.child(item->data->name.GetString());
 			ret = item->data->Awake(node);
 			item = item->next;
@@ -136,10 +131,8 @@ bool App::LoadConfig()
 {
 	bool ret = false;
 
-	// L01: DONE 3: Load config.xml file using load_file() method from the xml_document class
 	pugi::xml_parse_result parseResult = configFile.load_file("config.xml");
 
-	// L01: DONE 3: Check result for loading errors
 	if (parseResult) {
 		ret = true;
 		configNode = configFile.child("config");
@@ -159,7 +152,6 @@ void App::PrepareUpdate()
 // ---------------------------------------------
 void App::FinishUpdate()
 {
-	// L03: TODO 1: This is a good place to call Load / Save methods
 
 }
 
@@ -270,12 +262,3 @@ const char* App::GetOrganization() const
 {
 	return organization.GetString();
 }
-
-// L03: TODO 1: Implement methods to request load / save and methods 
-// for the real execution of load / save (to be implemented in TODO 5 and 7)
-
-// L03: TODO 5: Implement the method LoadFromFile() to actually load a xml file
-// then call all the modules to load themselves
-
-// L03: TODO 7: Implement the xml save method SaveToFile() for current state
-// check https://pugixml.org/docs/quickstart.html#modify

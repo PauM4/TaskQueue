@@ -55,8 +55,6 @@ public:
 		return true;
 	}
 
-	// L03: TODO 2: Create new virtual methods to LoadState / SaveState
-
 public:
 
 	SString name;

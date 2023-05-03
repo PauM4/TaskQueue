@@ -25,7 +25,6 @@ bool Scene::Awake(pugi::xml_node& config)
 	LOG("Loading Scene");
 	bool ret = true;
 
-	//L02: DONE 3: Instantiate the player using the entity manager
 	player = (Player*)app->entityManager->CreateEntity(EntityType::PLAYER);
 	player->parameters = config.child("player");
 
@@ -59,7 +58,6 @@ bool Scene::PreUpdate()
 // Called each loop iteration
 bool Scene::Update(float dt)
 {
-	// L03: TODO 3: Request App to Load / Save when pressing the keys F5 (save) / F6 (load)
 
 	if (app->input->GetKey(SDL_SCANCODE_UP) == KEY_REPEAT)
 		app->render->camera.y -= 1;

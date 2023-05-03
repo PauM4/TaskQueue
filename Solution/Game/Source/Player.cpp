@@ -22,11 +22,6 @@ Player::~Player() {
 
 bool Player::Awake() {
 
-	//L02: DONE 1: Initialize Player parameters
-	//pos = position;
-	//texturePath = "Assets/Textures/player/idle1.png";
-
-	//L02: DONE 5: Get Player parameters from XML
 	pos.x = parameters.attribute("x").as_int();
 	pos.y = parameters.attribute("y").as_int();
 	texturePath = parameters.attribute("texturepath").as_string();
@@ -50,10 +45,7 @@ bool Player::Start() {
 
 bool Player::Update()
 {
-	//L02: DONE 4: modify the position of the player using arrow keys and render the texture
 	Movement();
-
-	
 
 	return true;
 }
