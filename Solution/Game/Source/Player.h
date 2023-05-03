@@ -39,6 +39,7 @@ private:
 	SDL_Texture* texture;
 	const char* texturePath;
 
+	//TODO 4 Add new task for each button
 	Task* buttonW = nullptr;
 	Task* buttonA = nullptr;
 	Task* buttonS = nullptr;

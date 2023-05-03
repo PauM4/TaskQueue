@@ -46,12 +46,14 @@ bool Player::Start() {
 bool Player::Update()
 {
 	Movement();
+	app->render->DrawTexture(texture, pos.x, pos.y);
 
 	return true;
 }
 
 bool Player::CleanUp()
 {
+	//TODO 4 Remember to delete the new Tasks
 	delete buttonD;
 	delete buttonA;
 	delete buttonW;
@@ -61,7 +63,6 @@ bool Player::CleanUp()
 
 bool Player::Movement()
 {
-	std::cout << pos.x << std::endl;
 	//TODO 4 Add the task to the queque 
 	if (app->input->GetKey(SDL_SCANCODE_A) == KEY_DOWN)
 	{
@@ -84,6 +85,6 @@ bool Player::Movement()
 		posaux = pos;
 		app->task->AddTask(buttonS);
 	}
-	app->render->DrawTexture(texture, pos.x, pos.y);
+	
 	return true;
 }

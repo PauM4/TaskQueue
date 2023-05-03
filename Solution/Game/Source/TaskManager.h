@@ -30,6 +30,7 @@ public:
 	Task * aux_task = nullptr;
 };
 
+//TODO 2 Create a class for each task you want to do (one for each direction)
 
 class MoveLeft : public Task
 {
@@ -39,8 +40,6 @@ public:
 
 	bool Execute(Player* actor);
 };
-//TODO 2 Create a class for each task you want to do (one for each direction)
-//TODO 6 Add the parameter "Actor" to all Execute() functions 
 
 class MoveRight : public Task
 {
