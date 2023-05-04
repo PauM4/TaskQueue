@@ -13,20 +13,20 @@ A great way to learn how to use task queues in video games is by observing how o
 ### Age of Empires
 In games like Age of Empires, constructing a building takes time and resources. The game adds the construction task to a queue and processes it in the background while allowing the player to continue managing their empire.
 
-![(https://github.com/PauM4/TaskQueue/blob/main/docs/images/AG_II.jpeg)]([https://youtu.be/wtOxx2zixrQ](https://youtu.be/wtOxx2zixrQ?t=3990))
+[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/AG_II.jpeg)](https://youtu.be/wtOxx2zixrQ?t=3990)
 *Gameplay no commentary - Age of Empires II, Definitive Edition (2019)*
 
 ### World of Warcraft
 In games with RPG mechanics, players can use powerful abilities that have a cooldown period before they can be used again. These abilities are added to a task queue and cannot be used again until the cooldown has completed.
 Also, completing a quest involves multiple steps and requires the player to interact with various NPCs or objects. The game uses a task queue to manage the quest progression and ensure that the player completes each step in the correct order.
 
-[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/WOW.jpg)]([https://youtu.be/Qce3IqbTiJM](https://youtu.be/Qce3IqbTiJM?t=4099))
+[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/WOW.jpg)](https://youtu.be/Qce3IqbTiJM?t=4099)
 *Battle for Azeroth - World of Warcraft (2004)*
 
 ### Civilitzation
 In games like Civilization, combat is turn-based, meaning that each player or character takes turns making moves. The game uses a task queue to manage the turn order and ensure that each player or character gets their turn in the correct order.
 
-[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/CV_VI.jpg)]([https://youtu.be/0geOdVTDBFk](https://youtu.be/0geOdVTDBFk?t=5092))
+[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/CV_VI.jpg)](https://youtu.be/0geOdVTDBFk?t=5092)
 *Gameplay no commentary - Civilization VI (2016)*
 
 ## Command Pattern
