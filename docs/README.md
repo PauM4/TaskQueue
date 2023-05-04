@@ -272,3 +272,17 @@ bool Player::Movement()
 ```
 
 ## Conclusion
+
+The Task Queue or Task Manager are very useful tools for controlling the various actions that can happen simultaneously or not in a video game. Also, the fact that these tasks can be developed asynchronously provides even more freedom.
+
+Therefore, all in all, these tools provide endless possibilities for developing your video game.
+
+In our case, for RPG games, we can get the most out of this utility. On the one hand, we can apply it to combat; how turns are managed, the order of skills and attacks... Also outside of combat, to manage missions or actions that the player can perform.
+
+Finally, the Task Queue or Task Manager are very simple tools that can become more complex as we give them more uses or complement them with other mechanisms such as the Command Pattern.
+
+## Relevant Links
+
+![Command [Wiki]. Code Programming Patterns](http://gameprogrammingpatterns.com/command.html)
+![]()
+![]()
