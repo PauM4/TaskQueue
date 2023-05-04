@@ -71,3 +71,180 @@ private:
 	//TODO 1 Create a queue of tasks
 	std::queue<Task*> TaskQueue;
 ```
+
+### TODO 2
+
+```
+//TODO 2 Create a class for each task you want to do (one for each direction)
+
+class MoveLeft : public Task
+{
+public:
+	MoveLeft() {};
+	virtual  ~MoveLeft() {};
+
+	bool Execute(Player* actor);
+};
+```
+
+### TODO 3
+
+```
+private:
+	
+	SDL_Texture* texture;
+	const char* texturePath;
+
+	//TODO 3 Add new task for each button
+	Task* buttonW = nullptr;
+	Task* buttonA = nullptr;
+	Task* buttonS = nullptr;
+	Task* buttonD = nullptr;
+
+};
+```
+
+### TODO 4
+
+```
+//TODO 4 Let's fill the function Execute command for each class. In these case, how should the player move
+bool MoveLeft::Execute(Player* actor)
+{
+	bool ret = false;
+	if (actor->pos.x == actor->posaux.x - 30)
+	{
+		actor->posaux.x = actor->pos.x;
+
+ 		ret = true;
+	}
+	else
+	{
+		actor->pos.x -= actor->speed.x;
+	}
+	return ret;
+}
+```
+
+### TODO 5
+
+```
+bool Task::Update(float dt)
+{
+	bool ret = false; 
+	//TODO 5 Pop the first task of the list
+	if (app->input->GetKey(SDL_SCANCODE_SPACE) == KEY_DOWN)
+	{
+		if (aux_task == nullptr && TaskQueue.size() != 0)
+		{
+			aux_task = TaskQueue.front();
+			TaskQueue.pop();
+		}
+	}
+
+	ret = DoTask();
+
+	return ret;
+}
+```
+
+### TODO 6
+
+```
+bool Task::AddTask(Task * task)
+{
+	//TODO 6 Add the new task to the list
+	TaskQueue.push(task);
+
+	return true;
+}
+```
+
+### TODO 7
+
+```
+bool Task::DoTask()
+{
+	if (aux_task != nullptr)
+	{
+		//TODO 7 If the task is finished, pop the next task until the queue is empty
+		if (aux_task->Execute(app->scene->player))
+		{
+			if (TaskQueue.size() != 0)
+			{
+				aux_task = TaskQueue.front();
+				TaskQueue.pop();
+			}
+			else aux_task = nullptr;
+
+		}
+	}
+	return true;
+}
+```
+
+### TODO 8
+
+```
+bool Player::Start() {
+
+	//initilize textures
+	speed.x = 2;
+	speed.y = 2;
+	texture = app->tex->Load(texturePath);
+
+	//TODO 8 Initialize the task that we will use
+	buttonD = new MoveRight;
+	buttonA = new MoveLeft;
+	buttonW = new MoveForward;
+	buttonS = new MoveBackWard;
+	return true;
+}
+```
+
+### TODO 9
+
+```
+bool Player::CleanUp()
+{
+	//TODO 9 Remember to delete the new Tasks
+	delete buttonD;
+	delete buttonA;
+	delete buttonW;
+	delete buttonS;
+	return true;
+}
+```
+
+### TODO 10
+
+```
+bool Player::Movement()
+{
+	//TODO 10 Add the task to the queque 
+	if (app->input->GetKey(SDL_SCANCODE_A) == KEY_DOWN)
+	{
+		posaux = pos;
+		app->task->AddTask(buttonA);
+	}
+	if (app->input->GetKey(SDL_SCANCODE_D) == KEY_DOWN)
+	{
+		posaux = pos;
+		app->task->AddTask(buttonD);
+
+	}
+	if (app->input->GetKey(SDL_SCANCODE_W) == KEY_DOWN)
+	{
+		posaux = pos;
+		app->task->AddTask(buttonW);
+	}
+	if (app->input->GetKey(SDL_SCANCODE_S) == KEY_DOWN)
+	{
+		posaux = pos;
+		app->task->AddTask(buttonS);
+	}
+	
+	return true;
+}
+```
+
+## Conclusion
