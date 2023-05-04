@@ -13,14 +13,21 @@ A great way to learn how to use task queues in video games is by observing how o
 ### Age of Empires
 In games like Age of Empires, constructing a building takes time and resources. The game adds the construction task to a queue and processes it in the background while allowing the player to continue managing their empire.
 
-[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/AG_II.jpeg)](https://youtu.be/0geOdVTDBFk)
+[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/AG_II.jpeg)]([https://youtu.be/wtOxx2zixrQ](https://youtu.be/wtOxx2zixrQ?t=3990))
+*Gameplay no commentary - Age of Empires II, Definitive Edition (2019)*
 
 ### World of Warcraft
 In games with RPG mechanics, players can use powerful abilities that have a cooldown period before they can be used again. These abilities are added to a task queue and cannot be used again until the cooldown has completed.
 Also, completing a quest involves multiple steps and requires the player to interact with various NPCs or objects. The game uses a task queue to manage the quest progression and ensure that the player completes each step in the correct order.
 
+[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/WOW.jpg)]([https://youtu.be/Qce3IqbTiJM](https://youtu.be/Qce3IqbTiJM?t=4099))
+*Battle for Azeroth - World of Warcraft (2004)*
+
 ### Civilitzation
 In games like Civilization, combat is turn-based, meaning that each player or character takes turns making moves. The game uses a task queue to manage the turn order and ensure that each player or character gets their turn in the correct order.
+
+[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/CV_VI.jpg)]([https://youtu.be/0geOdVTDBFk](https://youtu.be/0geOdVTDBFk?t=5092))
+*Gameplay no commentary - Civilization VI (2016)*
 
 ## Command Pattern
 In order to implement task queues, we utilize what is known as the command pattern. According to the book "Game Programming Patterns", "commands are an object-oriented replacement for callbacks". By treating tasks as objects rather than functions, we can apply the command pattern to redefine keys and change the actor of the action.
@@ -34,6 +41,9 @@ In video games, the command pattern can be used to implement task queues, as men
 For my Task Queue research, I have chosen to focus on the combat of RPG games. In this type of combat, the task queue or the task manager is very useful due to the fact that multiple actions are performed in one turn and these must be ordered and executed in a certain way.
 
 In simple turn-based RPGs, the order in which the different abilities and attacks will be executed has to be organized. On the other hand, in tactical RPGs, the possibility of choosing where to move our character is added. All this added up, makes the task queue or task manager essential for the combat to develop correctly.
+
+[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/GS_II.jpg)](https://youtu.be/rn34B4XhJ4I)
+*Battle against Dullahan - Golden Sun 2 (2002)*
 
 ## Exercise
 
