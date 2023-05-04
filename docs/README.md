@@ -37,7 +37,9 @@ In simple turn-based RPGs, the order in which the different abilities and attack
 
 For this practical part we will learn how to implement a simple task manager and the basic commands to make a player move after indicate him what moves to make.
 
-### TODO 0
+### TODO 0 - TaskManager.h
+
+In this first TODO what we will do will be to understand how this new Task Manager module called Task is built. Like every module inherited from Module, it has its constructor and its update and cleanup functions. In addition, it will have a function that will allow us to add tasks to the task queue and another to execute them.
 
 ```
 class Task: public Module
@@ -64,7 +66,9 @@ public:
 };
 ```
 
-### TODO 1
+### TODO 1 - TaskManager.h
+
+To be able to save all the tasks, we create a list of the Task class. In this we will be adding all the tasks so that later, when we call the function to execute them, we will know where we saved them.
 
 ```
 private:
@@ -72,7 +76,11 @@ private:
 	std::queue<Task*> TaskQueue;
 ```
 
-### TODO 2
+### TODO 2 - TaskManager.h
+
+In this section, what we will do is declare a class for each of the tasks we want in our video game.
+
+For this case, we will declare a class for each of the directions in which the player can move, that is, four in total. These classes will have their constructor and a function to execute them, to which we will pass the "actor" on which they have to be performed, in our case the player.
 
 ```
 //TODO 2 Create a class for each task you want to do (one for each direction)
@@ -87,7 +95,9 @@ public:
 };
 ```
 
-### TODO 3
+### TODO 3 - Player.h
+
+In TODO 3 our goal is to create the number of tasks we will need for our game. In this exercise, we will create 4 for each of the directions, which will be added to the task queue by pressing the keys W, A, S, and D.
 
 ```
 private:
@@ -104,7 +114,9 @@ private:
 };
 ```
 
-### TODO 4
+### TODO 4 - TaskManager.cpp
+
+Once we have declared and created the 4 functions that we will use, it's time to define what they do. In our case, we will code how will move. That is, for how long it should move and at what speed.
 
 ```
 //TODO 4 Let's fill the function Execute command for each class. In these case, how should the player move
@@ -125,7 +137,9 @@ bool MoveLeft::Execute(Player* actor)
 }
 ```
 
-### TODO 5
+### TODO 5 - TaskManager.cpp
+
+In this section, we will define when the task queue is executed. In our case, it will be executed when the spacebar is pressed. When it's pressed, we will check if the aux_task is null (this stores the task at the front of the queue). If it's not null and the queue is not empty, we will start emptying the queue as tasks are executed.
 
 ```
 bool Task::Update(float dt)
@@ -147,7 +161,9 @@ bool Task::Update(float dt)
 }
 ```
 
-### TODO 6
+### TODO 6 - TaskManager.cpp
+
+For TODO 6, our goal is to define how the AddTask function works. In this case, we will simply make sure that every time it's called, a push is made to the task list with the new task to be added.
 
 ```
 bool Task::AddTask(Task * task)
@@ -159,7 +175,9 @@ bool Task::AddTask(Task * task)
 }
 ```
 
-### TODO 7
+### TODO 7 - TaskManager.cpp
+
+For this section, we will define how the DoTask function works, which will be responsible for executing the tasks. This function checks the "actor" that we have passed to it and begins to execute the tasks it has stored. At the same time, during execution, it also removes the tasks that have already been completed from the queue.
 
 ```
 bool Task::DoTask()
@@ -182,7 +200,9 @@ bool Task::DoTask()
 }
 ```
 
-### TODO 8
+### TODO 8 - Player.cpp
+
+We initialize the different tasks that we will use and that we have previously declared in TODO 2.
 
 ```
 bool Player::Start() {
@@ -201,7 +221,9 @@ bool Player::Start() {
 }
 ```
 
-### TODO 9
+### TODO 9 - Player.cpp
+
+For TODO 9, as in all classes, we must not forget to delete the tasks that we created in the start function in the cleanup function, in this case, in the player module.
 
 ```
 bool Player::CleanUp()
@@ -215,7 +237,9 @@ bool Player::CleanUp()
 }
 ```
 
-### TODO 10
+### TODO 10 - Player.cpp
+
+Finally, for our new TaskManager module to work, we will define when tasks should be added to the task queue. In our case, each of the keys we defined earlier corresponds to one of the four movements the player can make.
 
 ```
 bool Player::Movement()
