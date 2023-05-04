@@ -11,7 +11,7 @@ class Player;
 class Task: public Module
 {
 public:
-	//TODO 0 Understand what how works the nex class Task Manager
+	//TODO 0 Understand how works the next class Task Manager
 	Task() {};
 	virtual ~Task() {};
 
