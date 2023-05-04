@@ -2,7 +2,7 @@
 
 ## Description
 
-{project description}
+This project consists of how to implement a task manager system in C++ and what uses it can have in video games.
 
 ## About Author
 
