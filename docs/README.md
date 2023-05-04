@@ -33,9 +33,9 @@ For my Task Queue research, I have chosen to focus on the combat of RPG games. I
 
 In simple turn-based RPGs, the order in which the different abilities and attacks will be executed has to be organized. On the other hand, in tactical RPGs, the possibility of choosing where to move our character is added. All this added up, makes the task queue or task manager essential for the combat to develop correctly.
 
-For this practical part we will learn how to implement a simple task manager and the basic commands to make a player move after indicate him what moves to make.
-
 ## Exercise
+
+For this practical part we will learn how to implement a simple task manager and the basic commands to make a player move after indicate him what moves to make.
 
 ### TODO 0
 
