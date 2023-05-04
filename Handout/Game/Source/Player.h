@@ -40,10 +40,7 @@ private:
 	const char* texturePath;
 
 	//TODO 3 Add new task for each button
-	Task* buttonW = nullptr;
-	Task* buttonA = nullptr;
-	Task* buttonS = nullptr;
-	Task* buttonD = nullptr;
+	
 
 };
 

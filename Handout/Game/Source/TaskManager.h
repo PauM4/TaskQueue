@@ -25,7 +25,7 @@ public:
 
 private:
 	//TODO 1 Create a queue of tasks
-	std::queue<Task*> TaskQueue;
+	
 	
 public:
 	Task * aux_task = nullptr;
@@ -36,37 +36,25 @@ public:
 class MoveLeft : public Task
 {
 public:
-	MoveLeft() {};
-	virtual  ~MoveLeft() {};
-
-	bool Execute(Player* actor);
+	
 };
 
 class MoveRight : public Task
 {
 public:
-	MoveRight() {};
-	virtual  ~MoveRight() {};
-
-	bool Execute(Player* actor);
+	
 };
 
 class MoveForward : public Task
 {
 public:
-	MoveForward() {};
-	virtual  ~MoveForward() {};
-
-	bool Execute(Player* actor);
+	
 };
 
 class MoveBackWard : public Task
 {
 public:
-	MoveBackWard() {};
-	virtual  ~MoveBackWard() {};
-
-	bool Execute(Player* actor);
+	
 };
 #endif // !_TASKMANAGER_H__
 
