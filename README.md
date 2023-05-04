@@ -6,10 +6,7 @@ This project consists of how to implement a task manager system in C++ and what 
 
 ## About Author
 
- - {Feature01}
- - {Feature02}
- - {Feature03}
- - {Feature04}
+Oriol Martín Corella, a student of Video Game Design and Development at CITM(UPC).
  
 ## Relevant Links
 
