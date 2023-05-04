@@ -39,4 +39,35 @@ For this practical part we will learn how to implement a simple task manager and
 
 ### TODO 0
 
+```
+class Task: public Module
+{
+public:
+	//TODO 0 Understand what how works the nex class Task Manager
+	Task() {};
+	virtual ~Task() {};
+
+	virtual bool Execute(Player* actor) { return true; };
+
+	bool Update(float dt);
+	bool CleanUp();
+
+	bool AddTask(Task* task);
+	bool DoTask();
+
+private:
+	//TODO 1 Create a queue of tasks
+	std::queue<Task*> TaskQueue;
+	
+public:
+	Task * aux_task = nullptr;
+};
+```
+
 ### TODO 1
+
+```
+private:
+	//TODO 1 Create a queue of tasks
+	std::queue<Task*> TaskQueue;
+```
