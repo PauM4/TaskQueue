@@ -13,7 +13,7 @@ A great way to learn how to use task queues in video games is by observing how o
 ### Age of Empires
 In games like Age of Empires, constructing a building takes time and resources. The game adds the construction task to a queue and processes it in the background while allowing the player to continue managing their empire.
 
-![![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/AG_II.jpeg)](https://youtu.be/0geOdVTDBFk)
+[![](https://github.com/PauM4/TaskQueue/blob/main/docs/images/AG_II.jpeg)](https://youtu.be/0geOdVTDBFk)
 
 ### World of Warcraft
 In games with RPG mechanics, players can use powerful abilities that have a cooldown period before they can be used again. These abilities are added to a task queue and cannot be used again until the cooldown has completed.
