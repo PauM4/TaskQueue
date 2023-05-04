@@ -26,3 +26,17 @@ In order to implement task queues, we utilize what is known as the command patte
 To apply the command pattern, you typically define a Command interface or abstract class that specifies a method for executing the command. You then create concrete command classes that implement the Command interface and encapsulate a specific request or action. The command objects are usually created by a client and passed to an invoker object, which maintains a queue of commands and executes them in order.
 
 In video games, the command pattern can be used to implement task queues, as mentioned earlier. By treating tasks as objects and encapsulating them within command objects, you can easily add them to a task queue and execute them in the background, while allowing the player to continue interacting with the game world. This approach enables you to create complex gameplay mechanics that can be managed seamlessly and efficiently, without disrupting the player's experience.
+
+## Selected approach
+
+For my Task Queue research, I have chosen to focus on the combat of RPG games. In this type of combat, the task queue or the task manager is very useful due to the fact that multiple actions are performed in one turn and these must be ordered and executed in a certain way.
+
+In simple turn-based RPGs, the order in which the different abilities and attacks will be executed has to be organized. On the other hand, in tactical RPGs, the possibility of choosing where to move our character is added. All this added up, makes the task queue or task manager essential for the combat to develop correctly.
+
+For this practical part we will learn how to implement a simple task manager and the basic commands to make a player move after indicate him what moves to make.
+
+## Exercise
+
+### TODO 0
+
+### TODO 1
